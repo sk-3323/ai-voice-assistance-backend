@@ -1,0 +1,13 @@
+import { Router } from "express";
+import VoiceRouter from "./voice.route";
+import OrderRouter from "./order.route";
+import CartRouter from "./cart.route";
+import ProductRouter from "./product.route";
+import userRouter from "./user.route";
+const RootRouter = Router();
+RootRouter.use("/voice", VoiceRouter);
+RootRouter.use("/users", userRouter);
+RootRouter.use("/order", OrderRouter);
+RootRouter.use("/cart", CartRouter);
+RootRouter.use("/product", ProductRouter);
+export default RootRouter;

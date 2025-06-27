@@ -1,0 +1,10 @@
+import { Router } from "express";
+import { upload } from "../config/multer";
+import { createCall, promptController } from "../controller/prompt.controller";
+import { twilioVoice } from "../controller/voice.controller";
+const VoiceRouter = Router();
+// VoiceRouter.get();
+VoiceRouter.post("/", promptController);
+// VoiceRouter.post("/voice", twilioVoice);
+VoiceRouter.post("/call", createCall);
+export default VoiceRouter;
